@@ -1,0 +1,40 @@
+{
+  "name": "Data_Analyst",
+  "description": "An agent capable of performing deep data analysis on datasets.",
+  "capabilities": [
+    {
+      "name": "analyze_dataset",
+      "description": "Analyzes a given dataset and returns natural language insights.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "data_payload": {
+            "type": "string",
+            "description": "Base64 encoded CSV data."
+          },
+          "query": {
+            "type": "string",
+            "description": "Specific question to answer about the data."
+          }
+        },
+        "required": [
+          "data_payload"
+        ]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "result": {
+            "type": "string",
+            "description": "Natural language analysis results."
+          }
+        }
+      }
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "description": "Authorization: Bearer <token> required on /jsonrpc"
+  },
+  "rpc_endpoint": "https://da-agent-2h3hgdmahq-uc.a.run.app/jsonrpc"
+}
