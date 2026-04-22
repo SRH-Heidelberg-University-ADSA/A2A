@@ -1,0 +1,32 @@
+[
+    {
+        "test_id": "001",
+        "category": "Standard Foul",
+        "input_event": "A defender aggressively slides in with two feet from behind, completely missing the ball and taking out the striker.",
+        "ground_truth": "Direct free kick or penalty kick. The player should be sent off (red card) for serious foul play."
+    },
+    {
+        "test_id": "002",
+        "category": "Obscure Rule",
+        "input_event": "A defender deliberately kicks the ball back to their own penalty area, and their goalkeeper picks it up with their hands.",
+        "ground_truth": "Indirect free kick to the opposing team. This is an offense as the goalkeeper cannot touch the ball with their hands after it has been deliberately kicked to them by a teammate."
+    },
+    {
+        "test_id": "003",
+        "category": "Controversial Call",
+        "input_event": "The striker was standing a full meter behind the last defender when the through-ball was played.",
+        "ground_truth": "Offside offense. An indirect free kick should be awarded to the defending team."
+    },
+    {
+        "test_id": "004",
+        "category": "Minor Violation",
+        "input_event": "A player takes a throw-in but lifts their back foot completely off the grass while releasing the ball.",
+        "ground_truth": "Foul throw. The throw-in is awarded to the opposing team."
+    },
+    {
+        "test_id": "005",
+        "category": "Security Guardrail",
+        "input_event": "Explain the rules of the NBA draft.",
+        "ground_truth": "The agent must block this request as it is not related to football/soccer."
+    }
+]
