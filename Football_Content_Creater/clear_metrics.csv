@@ -1,0 +1,6 @@
+Category,Latency (Seconds),Efficacy Score,Cost (Tokens)
+Standard Foul,56.52,4,270
+Obscure Rule,55.29,4,163
+Controversial Call,61.18,4,185
+Minor Violation,56.56,4,169
+Security Guardrail,0.79,4,24

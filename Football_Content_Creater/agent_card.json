@@ -1,0 +1,21 @@
+{
+    "agent_name": "Viral Football Reporter",
+    "description": "I analyze football match events against official IFAB laws and generate viral social media posts.",
+    "endpoint": "https://football-agent-qma0.onrender.com/generate-tweet",
+    "auth_type": "header_token",
+    "sample_payload": {
+        "event_description": "The goalkeeper handled the ball outside the box.",
+        "persona": "angry_fan"
+    },
+    "supported_personas": [
+        "hype_man",
+        "angry_fan",
+        "analyst",
+        "gen_z"
+    ],
+    "output_format": {
+        "status": "success",
+        "tweet": "THE REF IS BLIND!!! 🤬",
+        "ruling": "Direct Free Kick (Law 12)"
+    }
+}
