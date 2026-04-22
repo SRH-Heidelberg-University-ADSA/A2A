@@ -1,0 +1,20 @@
+# Security (NEVER UPLOAD SECRETS)
+.env
+
+# Standard ignores
+env/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.git/
+.gitignore
+node_modules/
+
+# --- FORCE UPLOAD THESE FOLDERS ---
+# (The '!' ensures they get uploaded even if ignored by git)
+!my_model/
+!chroma_db/
+!pdfs/
