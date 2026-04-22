@@ -1,0 +1,353 @@
+{
+  "overall": {
+    "routing_accuracy": 100.0,
+    "average_latency": 10.609369901510386,
+    "output_completeness": 61.53846153846154,
+    "total_tasks": 13,
+    "total_input_tokens": 33155,
+    "total_output_tokens": 570
+  },
+  "per_category": {
+    "fitness": {
+      "routing_accuracy": 100.0,
+      "avg_latency": 15.7867671251297,
+      "output_completeness": 100.0,
+      "total": 2,
+      "input_tokens": 3894,
+      "output_tokens": 69
+    },
+    "data_analysis": {
+      "routing_accuracy": 100.0,
+      "avg_latency": 8.138084650039673,
+      "output_completeness": 0.0,
+      "total": 2,
+      "input_tokens": 3889,
+      "output_tokens": 65
+    },
+    "agriculture": {
+      "routing_accuracy": 100.0,
+      "avg_latency": 9.89790940284729,
+      "output_completeness": 100.0,
+      "total": 2,
+      "input_tokens": 3890,
+      "output_tokens": 68
+    },
+    "football": {
+      "routing_accuracy": 100.0,
+      "avg_latency": 9.693405508995056,
+      "output_completeness": 0.0,
+      "total": 2,
+      "input_tokens": 3905,
+      "output_tokens": 81
+    },
+    "calendar": {
+      "routing_accuracy": 100.0,
+      "avg_latency": 12.860923409461975,
+      "output_completeness": 100.0,
+      "total": 2,
+      "input_tokens": 10109,
+      "output_tokens": 183
+    },
+    "email": {
+      "routing_accuracy": 100.0,
+      "avg_latency": 9.675597190856934,
+      "output_completeness": 100.0,
+      "total": 1,
+      "input_tokens": 3953,
+      "output_tokens": 29
+    },
+    "out_of_scope": {
+      "routing_accuracy": 100.0,
+      "avg_latency": 7.746015667915344,
+      "output_completeness": 50.0,
+      "total": 2,
+      "input_tokens": 3515,
+      "output_tokens": 75
+    }
+  },
+  "individual_results": [
+    {
+      "task_id": "route_fitness_1",
+      "category": "fitness",
+      "query": "Give me a workout plan to gain muscle",
+      "expected_action": "delegate",
+      "expected_agent": "Fitness_Agent",
+      "actual_agent": "Fitness_Agent",
+      "actual_tool": null,
+      "routing_correct": true,
+      "latency": 23.302855491638184,
+      "output_complete": true,
+      "output_reason": "OK",
+      "input_tokens": 1945,
+      "output_tokens": 33,
+      "response_preview": "Here is a sample workout plan designed to help you gain muscle. Remember, consistency, proper form, progressive overload, and adequate nutrition (especially protein intake) are crucial for muscle grow",
+      "trace": [
+        "\u2705 **Authentication**: API Key Verified",
+        "**LLM Decision**: Matched `Fitness_Agent` for request",
+        "**Tool Call (delegate_task)**: Arguments: {\"target_agent_name\": \"Fitness_Agent\", \"task_query\": \"Give me a workout plan to gain muscle\"}",
+        "**Tool Call (delegate_task) Result**: Here is a sample workout plan designed to help you gain muscle. Remember, consistency, proper form, ..."
+      ]
+    },
+    {
+      "task_id": "route_fitness_2",
+      "category": "fitness",
+      "query": "What are the best high-protein meals for muscle building?",
+      "expected_action": "delegate",
+      "expected_agent": "Fitness_Agent",
+      "actual_agent": "Fitness_Agent",
+      "actual_tool": null,
+      "routing_correct": true,
+      "latency": 8.270678758621216,
+      "output_complete": true,
+      "output_reason": "OK",
+      "input_tokens": 1949,
+      "output_tokens": 36,
+      "response_preview": "Error from Agent 'Fitness_Agent': 500 Server Error: Internal Server Error for url: https://fitness-agent-1084313087342.us-central1.run.app/query",
+      "trace": [
+        "\u2705 **Authentication**: API Key Verified",
+        "**LLM Decision**: Matched `Fitness_Agent` for request",
+        "**Tool Call (delegate_task)**: Arguments: {\"target_agent_name\": \"Fitness_Agent\", \"task_query\": \"What are the best high-protein meals for muscle building?\"}",
+        "**Tool Call (delegate_task) Result**: Error from Agent 'Fitness_Agent': 500 Server Error: Internal Server Error for url: https://fitness-a..."
+      ]
+    },
+    {
+      "task_id": "route_data_1",
+      "category": "data_analysis",
+      "query": "Analyze the datset",
+      "expected_action": "delegate",
+      "expected_agent": "Data_Analyst",
+      "actual_agent": "Data_Analyst",
+      "actual_tool": null,
+      "routing_correct": true,
+      "latency": 7.912332057952881,
+      "output_complete": false,
+      "output_reason": "Too short",
+      "input_tokens": 1942,
+      "output_tokens": 30,
+      "response_preview": "Error from Agent 'Data_Analyst': {'code': -32602, 'message': 'Missing data_payload'}",
+      "trace": [
+        "\u2705 **Authentication**: API Key Verified",
+        "**LLM Decision**: Matched `Data_Analyst` for request",
+        "**Tool Call (delegate_task)**: Arguments: {\"target_agent_name\": \"Data_Analyst\", \"task_query\": \"Analyze the dataset\"}",
+        "**Tool Call (delegate_task) Result**: Error from Agent 'Data_Analyst': {'code': -32602, 'message': 'Missing data_payload'}"
+      ]
+    },
+    {
+      "task_id": "route_data_2",
+      "category": "data_analysis",
+      "query": "What are the key statistics from this CSV file?",
+      "expected_action": "delegate",
+      "expected_agent": "Data_Analyst",
+      "actual_agent": "Data_Analyst",
+      "actual_tool": null,
+      "routing_correct": true,
+      "latency": 8.363837242126465,
+      "output_complete": false,
+      "output_reason": "Too short",
+      "input_tokens": 1947,
+      "output_tokens": 35,
+      "response_preview": "Error from Agent 'Data_Analyst': {'code': -32602, 'message': 'Missing data_payload'}",
+      "trace": [
+        "\u2705 **Authentication**: API Key Verified",
+        "**LLM Decision**: Matched `Data_Analyst` for request",
+        "**Tool Call (delegate_task)**: Arguments: {\"target_agent_name\": \"Data_Analyst\", \"task_query\": \"What are the key statistics from this CSV file?\"}",
+        "**Tool Call (delegate_task) Result**: Error from Agent 'Data_Analyst': {'code': -32602, 'message': 'Missing data_payload'}"
+      ]
+    },
+    {
+      "task_id": "route_agri_1",
+      "category": "agriculture",
+      "query": "What is the weather forecast for Mumbai today?",
+      "expected_action": "delegate",
+      "expected_agent": "Agriculture_Agent",
+      "actual_agent": "Agriculture_Agent",
+      "actual_tool": null,
+      "routing_correct": true,
+      "latency": 10.576950073242188,
+      "output_complete": true,
+      "output_reason": "OK",
+      "input_tokens": 1946,
+      "output_tokens": 35,
+      "response_preview": "OUTPUT: The weather in Mumbai is hazy with a temperature of 27.03\u00b0C and 65% humidity.\nINTERMEDIATE STEPS: ['get_current_weather']",
+      "trace": [
+        "\u2705 **Authentication**: API Key Verified",
+        "**LLM Decision**: Matched `Agriculture_Agent` for request",
+        "**Tool Call (delegate_task)**: Arguments: {\"target_agent_name\": \"Agriculture_Agent\", \"task_query\": \"What is the weather forecast for Mumbai today?\"}",
+        "**Tool Call (delegate_task) Result**: OUTPUT: The weather in Mumbai is hazy with a temperature of 27.03\u00b0C and 65% humidity.\nINTERMEDIATE S..."
+      ]
+    },
+    {
+      "task_id": "route_agri_2",
+      "category": "agriculture",
+      "query": "Check the soil moisture levels in Karnataka",
+      "expected_action": "delegate",
+      "expected_agent": "Agriculture_Agent",
+      "actual_agent": "Agriculture_Agent",
+      "actual_tool": null,
+      "routing_correct": true,
+      "latency": 9.218868732452393,
+      "output_complete": true,
+      "output_reason": "OK",
+      "input_tokens": 1944,
+      "output_tokens": 33,
+      "response_preview": "OUTPUT: I am sorry, I am unable to fulfill this request at this moment. There seems to be an issue with the API key. Please try again later.\nINTERMEDIATE STEPS: ['get_soil_data']",
+      "trace": [
+        "\u2705 **Authentication**: API Key Verified",
+        "**LLM Decision**: Matched `Agriculture_Agent` for request",
+        "**Tool Call (delegate_task)**: Arguments: {\"target_agent_name\": \"Agriculture_Agent\", \"task_query\": \"Check soil moisture levels in Karnataka\"}",
+        "**Tool Call (delegate_task) Result**: OUTPUT: I am sorry, I am unable to fulfill this request at this moment. There seems to be an issue w..."
+      ]
+    },
+    {
+      "task_id": "route_football_1",
+      "category": "football",
+      "query": "The goalkeeper handled the ball outside the penalty area, generate a tweet about it",
+      "expected_action": "delegate",
+      "expected_agent": "Football_Reporter",
+      "actual_agent": "Football_Reporter",
+      "actual_tool": null,
+      "routing_correct": true,
+      "latency": 10.762653589248657,
+      "output_complete": false,
+      "output_reason": "Empty response",
+      "input_tokens": 1952,
+      "output_tokens": 40,
+      "response_preview": "",
+      "trace": [
+        "\u2705 **Authentication**: API Key Verified",
+        "**LLM Decision**: Matched `Football_Reporter` for request",
+        "**Tool Call (delegate_task)**: Arguments: {\"target_agent_name\": \"Football_Reporter\", \"task_query\": \"The goalkeeper handled the ball outside the penalty area, generate a tweet about it.\"}",
+        "**Tool Call (delegate_task) Result**: "
+      ]
+    },
+    {
+      "task_id": "route_football_2",
+      "category": "football",
+      "query": "A player scored a bicycle kick from 30 yards out, write a viral tweet",
+      "expected_action": "delegate",
+      "expected_agent": "Football_Reporter",
+      "actual_agent": "Football_Reporter",
+      "actual_tool": null,
+      "routing_correct": true,
+      "latency": 8.624157428741455,
+      "output_complete": false,
+      "output_reason": "Empty response",
+      "input_tokens": 1953,
+      "output_tokens": 41,
+      "response_preview": "",
+      "trace": [
+        "\u2705 **Authentication**: API Key Verified",
+        "**LLM Decision**: Matched `Football_Reporter` for request",
+        "**Tool Call (delegate_task)**: Arguments: {\"target_agent_name\": \"Football_Reporter\", \"task_query\": \"A player scored a bicycle kick from 30 yards out, write a viral tweet\"}",
+        "**Tool Call (delegate_task) Result**: "
+      ]
+    },
+    {
+      "task_id": "route_calendar_1",
+      "category": "calendar",
+      "query": "What events do I have on my calendar this week?",
+      "expected_action": "local_tool",
+      "expected_agent": null,
+      "actual_agent": null,
+      "actual_tool": "list_calendar_events",
+      "routing_correct": true,
+      "latency": 10.886107921600342,
+      "output_complete": true,
+      "output_reason": "OK",
+      "input_tokens": 3953,
+      "output_tokens": 47,
+      "response_preview": "I apologize, but I'm having trouble accessing your calendar events due to an expired or revoked token. Please try again later or check your account settings to ensure that the token is valid.",
+      "trace": [
+        "\u2705 **Authentication**: API Key Verified",
+        "**Local Assistant Tool**: `list_calendar_events`",
+        "**Tool Call (list_calendar_events)**: Arguments: {}",
+        "**Tool Call (list_calendar_events) Result**: Error fetching events: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_gran..."
+      ]
+    },
+    {
+      "task_id": "route_calendar_2",
+      "category": "calendar",
+      "query": "Schedule a meeting with John tomorrow at 3pm for 1 hour",
+      "expected_action": "local_tool",
+      "expected_agent": null,
+      "actual_agent": null,
+      "actual_tool": "schedule_calendar_event",
+      "routing_correct": true,
+      "latency": 14.835738897323608,
+      "output_complete": true,
+      "output_reason": "OK",
+      "input_tokens": 6156,
+      "output_tokens": 136,
+      "response_preview": "I apologize, but I am unable to schedule the meeting due to an authentication error. Please try again later or contact support for assistance.",
+      "trace": [
+        "\u2705 **Authentication**: API Key Verified",
+        "**Local Assistant Tool**: `schedule_calendar_event`",
+        "**Tool Call (schedule_calendar_event)**: Arguments: {\"summary\": \"Meeting with John\", \"start_time\": \"2026-03-20T15:00:00\", \"end_time\": \"2026-03-20T16:00:00\"}",
+        "**Tool Call (schedule_calendar_event) Result**: Error scheduling event: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_gra...",
+        "**Local Assistant Tool**: `schedule_calendar_event`",
+        "**Tool Call (schedule_calendar_event)**: Arguments: {\"summary\": \"Meeting with John\", \"start_time\": \"2026-03-20T15:00:00\", \"end_time\": \"2026-03-20T16:00:00\"}",
+        "**Tool Call (schedule_calendar_event) Result**: Error scheduling event: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_gra..."
+      ]
+    },
+    {
+      "task_id": "route_email_1",
+      "category": "email",
+      "query": "Summarize my top 5unread emails",
+      "expected_action": "local_tool",
+      "expected_agent": null,
+      "actual_agent": null,
+      "actual_tool": "summarize_unread_emails",
+      "routing_correct": true,
+      "latency": 9.675597190856934,
+      "output_complete": true,
+      "output_reason": "OK",
+      "input_tokens": 3953,
+      "output_tokens": 29,
+      "response_preview": "I apologize, but I am unable to summarize your unread emails at this time.",
+      "trace": [
+        "\u2705 **Authentication**: API Key Verified",
+        "**Local Assistant Tool**: `summarize_unread_emails`",
+        "**Tool Call (summarize_unread_emails)**: Arguments: {}",
+        "**Tool Call (summarize_unread_emails) Result**: Error summarizing emails: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_g..."
+      ]
+    },
+    {
+      "task_id": "route_fallback_2",
+      "category": "out_of_scope",
+      "query": "Translate this text to French: Hello World",
+      "expected_action": "fallback",
+      "expected_agent": null,
+      "actual_agent": null,
+      "actual_tool": null,
+      "routing_correct": true,
+      "latency": 7.154285669326782,
+      "output_complete": false,
+      "output_reason": "Empty response",
+      "input_tokens": 1569,
+      "output_tokens": 0,
+      "response_preview": "",
+      "trace": [
+        "\u2705 **Authentication**: API Key Verified"
+      ]
+    },
+    {
+      "task_id": "route_fallback_3",
+      "category": "out_of_scope",
+      "query": "Can you book me a flight to London?",
+      "expected_action": "fallback",
+      "expected_agent": null,
+      "actual_agent": null,
+      "actual_tool": null,
+      "routing_correct": true,
+      "latency": 8.337745666503906,
+      "output_complete": true,
+      "output_reason": "OK",
+      "input_tokens": 1946,
+      "output_tokens": 75,
+      "response_preview": "I don't have a specialized agent for that task.\n\nHere are my capabilities:\n\n* Calendar: schedule events, find free time slots, list upcoming events\n* Email: summarize unread emails\n* Delegation: deleg",
+      "trace": [
+        "\u2705 **Authentication**: API Key Verified"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+    "name": "AI_Assistant",
+    "description": "A personal assistant agent capable of calendar management and delegating data analysis tasks.",
+    "capabilities": [
+        {
+            "name": "manage_calendar",
+            "description": "Read and update Google Calendar events."
+        },
+        {
+            "name": "delegate_analysis",
+            "description": "Finds a Data Analyst agent and delegates data processing tasks."
+        },
+        {
+            "name": "consult_fitness_expert",
+            "description": "Consults a Fitness Agent for workout and nutrition advice."
+        }
+    ],
+    "dependencies": [
+        "Data_Analyst",
+        "Fitness_Agent"
+    ]
+}
