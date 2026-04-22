@@ -1,0 +1,96 @@
+[
+    {
+        "id": "route_fitness_1",
+        "query": "Give me a workout plan to gain muscle",
+        "expected_agent": "Fitness_Agent",
+        "expected_action": "delegate",
+        "category": "fitness"
+    },
+    {
+        "id": "route_fitness_2",
+        "query": "What are the best high-protein meals for muscle building?",
+        "expected_agent": "Fitness_Agent",
+        "expected_action": "delegate",
+        "category": "fitness"
+    },
+    {
+        "id": "route_data_1",
+        "query": "Analyze the datset",
+        "expected_agent": "Data_Analyst",
+        "expected_action": "delegate",
+        "category": "data_analysis"
+    },
+    {
+        "id": "route_data_2",
+        "query": "What are the key statistics from this CSV file?",
+        "expected_agent": "Data_Analyst",
+        "expected_action": "delegate",
+        "category": "data_analysis"
+    },
+    {
+        "id": "route_agri_1",
+        "query": "What is the weather forecast for Mumbai today?",
+        "expected_agent": "Agriculture_Agent",
+        "expected_action": "delegate",
+        "category": "agriculture"
+    },
+    {
+        "id": "route_agri_2",
+        "query": "Check the soil moisture levels in Karnataka",
+        "expected_agent": "Agriculture_Agent",
+        "expected_action": "delegate",
+        "category": "agriculture"
+    },
+    {
+        "id": "route_football_1",
+        "query": "The goalkeeper handled the ball outside the penalty area, generate a tweet about it",
+        "expected_agent": "Football_Reporter",
+        "expected_action": "delegate",
+        "category": "football"
+    },
+    {
+        "id": "route_football_2",
+        "query": "A player scored a bicycle kick from 30 yards out, write a viral tweet",
+        "expected_agent": "Football_Reporter",
+        "expected_action": "delegate",
+        "category": "football"
+    },
+    {
+        "id": "route_calendar_1",
+        "query": "What events do I have on my calendar this week?",
+        "expected_agent": null,
+        "expected_action": "local_tool",
+        "expected_tool": "list_calendar_events",
+        "category": "calendar"
+    },
+    {
+        "id": "route_calendar_2",
+        "query": "Schedule a meeting with John tomorrow at 3pm for 1 hour",
+        "expected_agent": null,
+        "expected_action": "local_tool",
+        "expected_tool": "schedule_calendar_event",
+        "category": "calendar"
+    },
+    {
+        "id": "route_email_1",
+        "query": "Summarize my top 5unread emails",
+        "expected_agent": null,
+        "expected_action": "local_tool",
+        "expected_tool": "summarize_unread_emails",
+        "category": "email"
+    },
+    {
+        "id": "route_fallback_2",
+        "query": "Translate this text to French: Hello World",
+        "expected_agent": null,
+        "expected_action": "fallback",
+        "category": "out_of_scope"
+    },
+    {
+        "id": "route_fallback_3",
+        "query": "Can you book me a flight to London?",
+        "expected_agent": null,
+        "expected_action": "fallback",
+        "category": "out_of_scope"
+    }
+]
