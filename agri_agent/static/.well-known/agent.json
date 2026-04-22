@@ -1,0 +1,14 @@
+{
+    "agent_id": "krishi-intel-001",
+    "name": "Krishi-Intel-Orchestrator",
+    "endpoint_url": "https://krishi-bot-712372631128.us-central1.run.app/chat",
+    "capabilities": [
+        {"tool": "weather", "purpose": "Checks real-time weather"},
+        {"tool": "soil", "purpose": "Retrieves moisture and temp data"} ,
+         {"tool": "pdf_search", "purpose": "Search agricultural PDFs"} ,
+         {"tool": "web_search", "purpose": "Search the internet"}
+    ],
+    "status": "operational"
+}
+
+
